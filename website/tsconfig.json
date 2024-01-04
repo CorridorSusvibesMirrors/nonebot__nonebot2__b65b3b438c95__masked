@@ -1,0 +1,36 @@
+{
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "@docusaurus/module-type-aliases",
+      "@nullbot/docusaurus-theme-nonepress"
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@theme/*": ["./src/theme/*"]
+    },
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Disabled on purpose (handled by ESLint, should not block compilation) */
+    "noUnusedParameters": false,
+
+    /* Advanced Options */
+    "resolveJsonModule": true,
+    "skipLibCheck": true, // @types/webpack and webpack/types.d.ts are not the same thing
+
+    /* Use tslib */
+    "importHelpers": true,
+    "noEmitHelpers": true
+  }
+}

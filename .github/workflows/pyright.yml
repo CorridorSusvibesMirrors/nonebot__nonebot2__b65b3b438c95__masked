@@ -15,7 +15,7 @@ jobs:
     name: Pyright Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Setup Python environment
         uses: ./.github/actions/setup-python
@@ -23,4 +23,4 @@ jobs:
       - run: echo "$(poetry env info --path)/bin" >> $GITHUB_PATH
 
       - name: Run Pyright
-        uses: jakebailey/pyright-action@v1
+        uses: jakebailey/pyright-action@v3
